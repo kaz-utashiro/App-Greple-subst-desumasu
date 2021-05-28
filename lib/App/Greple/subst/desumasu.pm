@@ -1,11 +1,9 @@
 package App::Greple::subst::desumasu;
-use 5.008001;
-use strict;
-use warnings;
 
 our $VERSION = "0.01";
 
-
+use 5.014;
+use warnings;
 
 1;
 __END__
@@ -18,22 +16,22 @@ App::Greple::subst::desumasu - It's new $module
 
 =head1 SYNOPSIS
 
-    use App::Greple::subst::desumasu;
+    greple -Msubst::desumasu
 
 =head1 DESCRIPTION
 
-App::Greple::subst::desumasu is ...
-
-=head1 LICENSE
-
-Copyright (C) Kazumasa Utashiro.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+greple -Msubst module based on L<desumasu-converter>.
 
 =head1 AUTHOR
 
-Kazumasa Utashiro E<lt>kaz@utashiro.comE<gt>
+Kazumasa Utashiro
+
+=head1 LICENSE
+
+Copyright 2021 Kazumasa Utashiro.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 

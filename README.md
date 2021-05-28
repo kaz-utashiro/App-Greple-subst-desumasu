@@ -4,19 +4,19 @@ App::Greple::subst::desumasu - It's new $module
 
 # SYNOPSIS
 
-    use App::Greple::subst::desumasu;
+    greple -Msubst::desumasu
 
 # DESCRIPTION
 
-App::Greple::subst::desumasu is ...
-
-# LICENSE
-
-Copyright (C) Kazumasa Utashiro.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+greple -Msubst module based on [desumasu-converter](https://metacpan.org/pod/desumasu-converter).
 
 # AUTHOR
 
-Kazumasa Utashiro <kaz@utashiro.com>
+Kazumasa Utashiro
+
+# LICENSE
+
+Copyright 2021 Kazumasa Utashiro.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
