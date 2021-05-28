@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Japanese DESU/MASU dictionary for App::Greple::subst",
    "author" : [
       "Kazumasa Utashiro"
    ],
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "App::Greple::subst" : "0",
+            "File::Share" : "0",
             "perl" : "5.014"
          }
       },
