@@ -1,3 +1,11 @@
+#
+# VARIABLES
+#   BOUNDARY
+#	DEFAULT : \pP
+#	BORDER  : \b
+#	PUNCT   : [。、（）()])
+#
+
 ORIGINAL := desumasu-converter.base
 NAME     := dearu desumasu
 BASE     := $(NAME:=.base)
@@ -12,21 +20,26 @@ clean:
 	rm -f $(ALL)
 
 PERL=perl -CSDA -Mutf8
-BOUNDARY=\\b
-BOUNDARY=(?=[。、（）()])
-BOUNDARY=(?=\\pP)
+
+ifeq ($(BOUNDARY),BORDER)
+BOUNDARY_REGEX=\\b
+else ifeq ($(BOUNDARY),PUNCT)
+BOUNDARY_REGEX=(?=[。、（）()])
+else
+BOUNDARY_REGEX=(?=\\pP)
+endif
 
 dearu.base: $(ORIGINAL) reorder.pl Makefile
-	$(PERL) reorder.pl $< > $@
+	awk '{ print $$1 "  " $$2 }' $< | column -t | $(PERL) reorder.pl > $@
 
 desumasu.base: $(ORIGINAL) reorder.pl Makefile
-	awk '{ print $$2 "  " $$1 }' $< | column -t | perl reorder.pl > $@
+	awk 'length($$3)==0 { print $$2 "  " $$1 }' $< | column -t | $(PERL) reorder.pl > $@
 
 %.dict: %.base Makefile
-	$(PERL) -p -E 's/(?=\s)/ね?$(BOUNDARY)/' $< > $@
+	$(PERL) -p -E 's/(?=\s)/ね?$(BOUNDARY_REGEX)/' $< > $@
 
 %-keep-ne.dict: %.base Makefile
-	$(PERL) -p -E 's/(?=\s)/(?=ね?$(BOUNDARY))/' $< > $@
+	$(PERL) -p -E 's/(?=\s)/(?=ね?$(BOUNDARY_REGEX))/' $< > $@
 
 %-ignore-ne.dict: %.base Makefile
-	$(PERL) -p -E 's/(?=\s)/$(BOUNDARY)/' $< > $@
+	$(PERL) -p -E 's/(?=\s)/$(BOUNDARY_REGEX)/' $< > $@
