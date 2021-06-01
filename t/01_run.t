@@ -1,22 +1,31 @@
-#!/usr/bin/env bats
+use v5.14;
+use warnings;
+use Encode;
 
-@test "Jotai" {
-	[ "$(perl -Ilib -S greple -Msubst::desumasu --dearu --subst --all --no-color t/t1-s.txt)" = "$(cat t/t2-s.txt)" ]
-#	[ "$(cat test/t1-s.txt|dist/cli.js -j|tr \"\\n\" 'X' )" = "$(cat test/t2-s.txt|tr \"\\n\" 'X' )" ]
-}
+use Test::More;
+use Data::Dumper;
 
-@test "Keitai" {
-	[ "$(perl -Ilib -S greple -Msubst::desumasu --desumasu --subst --all --no-color t/t2-s.txt)" = "$(cat t/t2-r.txt)" ]
-#	[ "$(cat t/t2-s.txt|tr \"\\n\" 'X' )" = "$(cat t/t2-r.txt|tr \"\\n\" 'X' )" ]
-}
+use lib '.';
+use t::Util;
 
-@test "Jotai-n" {
-	[ "$(perl -Ilib -S greple -Msubst::desumasu --dearu-n --subst --all --no-color t/t1-s.txt)" = "$(cat t/t3-r.txt)" ]
-#	[ "$(cat t/t1-s.txt|tr \"\\n\" 'X' )" = "$(cat t/t3-r.txt|tr \"\\n\" 'X' )" ]
-}
+is(
+    desumasu(qw(--dearu --subst --all --no-color t/t1-s.txt))->{stdout},
+    `cat t/t2-s.txt`
+);
 
-@test "Jotai-N" {
-	[ "$(perl -Ilib -S greple -Msubst::desumasu --dearu-N --subst --all --no-color t/t1-s.txt)" = "$(cat t/t4-r.txt)" ]
-#	[ "$(cat t/t1-s.txt|tr \"\\n\" 'X' )" = "$(cat t/t4-r.txt|tr \"\\n\" 'X' )" ]
-}
+is(
+    desumasu(qw(--desumasu --subst --all --no-color t/t2-s.txt))->{stdout},
+    `cat t/t2-r.txt`
+);
 
+is(
+    desumasu(qw(--dearu-n --subst --all --no-color t/t1-s.txt))->{stdout},
+    `cat t/t3-r.txt`
+);
+
+is(
+    desumasu(qw(--dearu-N --subst --all --no-color t/t1-s.txt))->{stdout},
+    `cat t/t4-r.txt`
+);
+
+done_testing;
