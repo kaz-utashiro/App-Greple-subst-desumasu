@@ -3,8 +3,9 @@
 #   BOUNDARY
 #	DEFAULT : \pP
 #	BORDER  : \b
-#	PUNCT   : [。、（）()])
+#	JPUNCT   : [。、（）()])
 #
+BOUNDARY?=JPUNCT
 
 ORIGINAL := desumasu-converter.base
 NAME     := dearu desumasu
@@ -23,7 +24,7 @@ PERL=perl -CSDA -Mutf8
 
 ifeq ($(BOUNDARY),BORDER)
 BOUNDARY_REGEX=\\b
-else ifeq ($(BOUNDARY),PUNCT)
+else ifeq ($(BOUNDARY),JPUNCT)
 BOUNDARY_REGEX=(?=[。、（）()])
 else
 BOUNDARY_REGEX=(?=\\pP)
