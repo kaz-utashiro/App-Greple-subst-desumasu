@@ -16,8 +16,6 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
-      - run: pwd
-      - run: bats -t t/test.bats
       - uses: actions/checkout@master
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1
@@ -25,4 +23,5 @@ jobs:
           perl-version: ${{ matrix.perl }}
       - run: perl -V
       - run: cpanm --installdeps --notest .
+      - run: bats -t t/test.bats
       - run: prove -lv t
