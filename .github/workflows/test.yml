@@ -6,13 +6,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -20,6 +13,10 @@ jobs:
         perl: [ '5.30', '5.28', '5.18', '5.14' ]
     name: Perl ${{ matrix.perl }}
     steps:
+      - name: Setup bats
+        uses: actions/setup-node@v1
+      - run: npm install -g bats
+      - run: bats -v
       - uses: actions/checkout@master
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1
