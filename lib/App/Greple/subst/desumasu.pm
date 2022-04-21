@@ -110,13 +110,15 @@ L<App::sdif>
 L<https://github.com/kssfilo/desumasu-converter>,
 L<https://kanasys.com/tech/722>
 
+L<greple で「ですます調」を「である化」する|https://qiita.com/kaz-utashiro/items/8f4878300043ce7b73e7>
+
 =head1 AUTHOR
 
 Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright 2021 Kazumasa Utashiro.
+Copyright 2021-2022 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

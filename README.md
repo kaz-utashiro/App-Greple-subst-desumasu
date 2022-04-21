@@ -50,7 +50,7 @@ Use them with **greple** **-Msubst** options.
 - **--diff**
 
     Produce diff output of original and converted text.  Use **cdif**
-    command in [App::sdif](https://metacpan.org/pod/App::sdif) to visualize the difference.
+    command in [App::sdif](https://metacpan.org/pod/App%3A%3Asdif) to visualize the difference.
 
 - **--create**
 - **--replace**
@@ -60,7 +60,7 @@ Use them with **greple** **-Msubst** options.
     file with `.new` suffix.  Option **--replace** update the target file
     with backup, while option **--overwrite** does without backup.
 
-See [App::Greple::subst](https://metacpan.org/pod/App::Greple::subst) for other options.
+See [App::Greple::subst](https://metacpan.org/pod/App%3A%3AGreple%3A%3Asubst) for other options.
 
 # INSTALL
 
@@ -72,12 +72,14 @@ From GIT repository:
 
 # SEE ALSO
 
-[App::Greple](https://metacpan.org/pod/App::Greple), [App::Greple::subst](https://metacpan.org/pod/App::Greple::subst)
+[App::Greple](https://metacpan.org/pod/App%3A%3AGreple), [App::Greple::subst](https://metacpan.org/pod/App%3A%3AGreple%3A%3Asubst)
 
-[App::sdif](https://metacpan.org/pod/App::sdif)
+[App::sdif](https://metacpan.org/pod/App%3A%3Asdif)
 
 [https://github.com/kssfilo/desumasu-converter](https://github.com/kssfilo/desumasu-converter),
 [https://kanasys.com/tech/722](https://kanasys.com/tech/722)
+
+[greple で「ですます調」を「である化」する](https://qiita.com/kaz-utashiro/items/8f4878300043ce7b73e7)
 
 # AUTHOR
 
@@ -85,7 +87,7 @@ Kazumasa Utashiro
 
 # LICENSE
 
-Copyright 2021 Kazumasa Utashiro.
+Copyright 2021-2022 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
