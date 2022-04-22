@@ -97,6 +97,10 @@ See L<App::Greple::subst> for other options.
 
 =head2 CPANMINUS
 
+From CPAN:
+
+    cpanm App::Greple::subst::desumasu
+
 From GIT repository:
 
     cpanm https://github.com/kaz-utashiro/greple-subst-desumasu.git

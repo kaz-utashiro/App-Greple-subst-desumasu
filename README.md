@@ -66,6 +66,10 @@ See [App::Greple::subst](https://metacpan.org/pod/App%3A%3AGreple%3A%3Asubst) fo
 
 ## CPANMINUS
 
+From CPAN:
+
+    cpanm App::Greple::subst::desumasu
+
 From GIT repository:
 
     cpanm https://github.com/kaz-utashiro/greple-subst-desumasu.git
