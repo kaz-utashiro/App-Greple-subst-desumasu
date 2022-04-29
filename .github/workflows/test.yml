@@ -17,6 +17,8 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - uses: actions/checkout@master
+        with:
+          submodules: recursive
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1
         with:
