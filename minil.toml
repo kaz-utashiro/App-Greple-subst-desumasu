@@ -1,8 +1,8 @@
 name = "App-Greple-subst-desumasu"
-# badges = ['github-actions/test', 'metacpan']
-authority="cpan:UTASHIRO"
+badges = [ 'github-actions/test', 'metacpan' ]
+authority = "cpan:UTASHIRO"
 
-module_maker="ModuleBuildTiny"
+module_maker = "ModuleBuildTiny"
 static_install = "auto"
 
 [release]

@@ -2,6 +2,10 @@ Revision history for Perl extension App-Greple-subst-desumasu
 
 {{$NEXT}}
 
+0.02 2022-04-29T07:11:30Z
+
+    - update test and workflow
+
 0.01 2022-04-22T00:33:42Z
 
     - original version

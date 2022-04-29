@@ -1,3 +1,4 @@
+[![Actions Status](https://github.com/kaz-utashiro/greple-subst-desumasu/workflows/test/badge.svg)](https://github.com/kaz-utashiro/greple-subst-desumasu/actions) [![MetaCPAN Release](https://badge.fury.io/pl/App-Greple-subst-desumasu.svg)](https://metacpan.org/release/App-Greple-subst-desumasu)
 # NAME
 
 App::Greple::subst::desumasu - Japanese DESU/MASU dictionary for App::Greple::subst
