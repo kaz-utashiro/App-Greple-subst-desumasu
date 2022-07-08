@@ -1,6 +1,6 @@
 package App::Greple::subst::desumasu;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use 5.014;
 use warnings;

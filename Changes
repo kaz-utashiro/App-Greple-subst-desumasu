@@ -2,6 +2,10 @@ Revision history for Perl extension App-Greple-subst-desumasu
 
 {{$NEXT}}
 
+0.03 2022-07-08T01:06:57Z
+
+    - 「である -> です」ルールを追加
+
 0.02 2022-04-29T07:11:30Z
 
     - update test and workflow
