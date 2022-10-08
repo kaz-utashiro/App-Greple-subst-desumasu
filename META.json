@@ -4,7 +4,7 @@
       "Kazumasa Utashiro"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.12, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.1.19, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "perl_5"
    ],
@@ -42,8 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "App::Greple::subst" : "0",
-            "File::Share" : "0",
+            "App::Greple::subst" : "2.3104",
+            "File::Share" : "0.27",
             "perl" : "5.014"
          }
       },
@@ -61,7 +61,7 @@
       "homepage" : "https://github.com/kaz-utashiro/greple-subst-desumasu",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/kaz-utashiro/greple-subst-desumasu.git",
+         "url" : "https://github.com/kaz-utashiro/greple-subst-desumasu.git",
          "web" : "https://github.com/kaz-utashiro/greple-subst-desumasu"
       }
    },
